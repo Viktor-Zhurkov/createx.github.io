@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    background-image: url('space.jpg');
     background-color: #333;
     color: whitesmoke;
 }
