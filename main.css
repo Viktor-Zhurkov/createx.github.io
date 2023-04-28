@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    /* box-sizing: border-box; */
 }
 
 .header {
@@ -22,6 +23,7 @@
     color: white;
     border-style: solid;
     border-color: white;
+    /* height: ; */
 }
 
 .header ul li {
@@ -48,13 +50,194 @@ body {
     text-align: center;
     padding-bottom: 2%;
 }
-
+/* 
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* width: 50%; */
+    width: 50%;
+} */
+/*---------------------------------*/
+
+.space {
+    margin-top: 10%;
+    /* bottom: 50%; */
+    display: flex;
+    /* position: fixed; */
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    height: 55vh;
+    overflow: hidden;
 }
+
+span {
+    margin-top: 7%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.sun {
+    width: 60px;
+    height: 60px;
+    background: #ff8b17;
+    box-shadow: 0 0 10px #ff8b17,
+        0 0 20px #ff8b17,
+        0 0 40px #ff8b17,
+        0 0 60px #ff8b17;
+    z-index: 9999;
+}
+
+
+.planet{
+    background: transparent;
+    border: 4px solid rgba(255, 255, 255, .5);
+    /* animation: orbit 10s linear infinite; */
+}
+
+.planet1{
+    width: 110px;
+    height: 110px;
+    animation: orbit 5.6s linear infinite;
+}
+
+
+.planet2{
+    width: 160px;
+    height: 160px;
+    animation: orbit 8s linear infinite;
+}
+
+.planet3{
+    width: 220px;
+    height: 220px;
+    animation: orbit 12s linear infinite;
+}
+
+.planet4{
+    width: 270px;
+    height: 270px;
+    animation: orbit 17s linear infinite;
+}
+
+.planet5{
+    width: 340px;
+    height: 340px;
+    animation: orbit 24s linear infinite;
+}
+
+.planet6{
+    width: 430px;
+    height: 430px;
+    animation: orbit 32s linear infinite;
+}
+
+.planet7{
+    width: 500px;
+    height: 500px;
+    animation: orbit 38s linear infinite;
+}
+
+.planet8{
+    width: 570px;
+    height: 570px;
+    animation: orbit 42s linear infinite;
+}
+
+span::before, span::after{
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.planet1::before{
+    width: 20px;
+    height: 20px;
+    bottom: 6px;
+    left: 2px;
+    background: #979797;
+}
+
+.planet2::before{
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    left: 10px;
+    background: #ff2c00;
+}
+
+
+.planet3::before{
+    width: 30px;
+    height: 30px;
+    top: 100px;
+    right: -15px;
+    background: #0099ff;
+}
+
+
+.planet4::before{
+    width: 30px;
+    height: 30px;
+    top: 22px;
+    left: 210px;
+    background: #ff2433;
+}
+
+
+.planet5::before{
+    width: 40px;
+    height: 40px;
+    bottom: -18px;
+    left: 170px;
+    background: #ffb624;
+}
+
+
+.planet6::before{
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    left: -7px;
+    background: #ffb84d;
+}
+
+.planet6::after{
+    width: 80px;
+    height: 20px;
+    top: 115px;
+    left: -21px;
+    background: #ffb84d;
+}
+
+
+.planet7::before{
+    width: 37px;
+    height: 37px;
+    bottom: 80px;
+    right: 30px;
+    background: #4d6bff;
+}
+
+.planet8::before{
+    width: 41px;
+    height: 41px;
+    top: 5px;
+    right: 140px;
+    background: #d04dff;
+}
+
+@keyframes orbit{
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+/*----------------------------------------*/
 
 /* .center {
     display: block;
